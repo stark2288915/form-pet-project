@@ -15,9 +15,6 @@ const FormComponent = () => {
 
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div>
-                    <input {...register("email", {required: true})}/>
-                </div>
-                <div>
                     <span className={'titleInput'}>How can one carry water in a sieve?</span>
                     <input {...register("waterQ", {required: true})}/>
                 </div>
@@ -149,7 +146,9 @@ const FormComponent = () => {
                 <div>
                     <span className={'titleInput'}>Do you have any design preferences or styles?</span>
 
-                    <select id={'selectDesignList'} value={'choose'} {...register("design", { required: true })}>
+                    <select id={'selectDesignList'}
+                            {...register("design", { required: true })}>
+                        <option value="">Please select</option>
                         <option value="This should be a custom design, I trust the developer.">This should be a custom design, I trust the developer.</option>
                         <option value="Yes, I have preferences - I'll show.">Yes, I have preferences - I'll show.</option>
                         <option value="I want it like these guys - I'll send a link to competitor websites.">I want it like these guys - I'll send a link to competitor websites.</option>
@@ -159,7 +158,8 @@ const FormComponent = () => {
                 <div>
                     <span className={'titleInput'}>What timeline do you expect for the project to be completed?</span>
 
-                    <select id={'selectDeadlineProj'} value={'choose'} {...register("deadlineProj", { required: true })}>
+                    <select id={'selectDeadlineProj'}  {...register("deadlineProj", { required: true })}>
+                        <option value="">Please select</option>
                         <option value="Up to one month">Up to one month</option>
                         <option value="From 1 - 3 month">From 1 - 3 month</option>
                         <option value="From 3 - 6 month">From 3 - 6 month</option>
@@ -171,7 +171,8 @@ const FormComponent = () => {
                 <div>
                     <span className={'titleInput'}>What budget are you considering for this project?</span>
 
-                    <select id={'selectbudgetProj'} value={'choose'} {...register("budgetProj", { required: true })}>
+                    <select id={'selectbudgetProj'}  {...register("budgetProj", { required: true })}>
+                        <option value="">Please select</option>
                         <option value="From $1000">From $1000</option>
                         <option value="From $1000 - $5000">From $1000 - $5000</option>
                         <option value="From $5000 - $10000">From $5000 - $10000</option>
@@ -186,7 +187,8 @@ const FormComponent = () => {
                     <span className={'titleInput'}>Are you considering integrating AI into your product?</span>
 
 
-                    <select id={'selectAiInProj'} value={'choose'} {...register("AiInProj", { required: true })}>
+                    <select id={'selectAiInProj'} {...register("AiInProj", { required: true })}>
+                        <option value="">Please select</option>
                         <option value="Yes, why not give it a try!">Yes, why not give it a try!</option>
                         <option value="No, there's no need for that.">No, there's no need for that.</option>
                         <option value="I dont know, I need more information.">I dont know, I need more information.</option>
@@ -196,8 +198,8 @@ const FormComponent = () => {
                 <div>
                     <span className={'titleInput'}>Do you work with the marketing part of your product?</span>
 
-                    <select id={'selectmarketingProj'} value={'choose'} {...register("marketingProj", { required: true })}>
-
+                    <select id={'selectmarketingProj'} {...register("marketingProj", { required: true })}>
+                        <option value="">Please select</option>
                         <option value="Yes, we have a well - established strategy and use our own approach.">Yes, we have a well - established strategy and use our own approach.</option>
                         <option value="We effectively promote our brand through SEO optimization.">We effectively promote our brand through SEO optimization.</option>
                         <option value="We engage in cold outreach strategies for marketing.">We engage in cold outreach strategies for marketing.</option>
@@ -222,7 +224,8 @@ const FormComponent = () => {
                 <div>
                     <span className={'titleInput'}>How soon are you prepared to begin?</span>
 
-                    <select id={'selectWhenStart'} value={'choose'} {...register("marketingProj", { required: true })}>
+                    <select id={'selectWhenStart'} {...register("marketingProj", { required: true })}>
+                        <option value="">Please select</option>
                         <option value="As soon as possible">As soon as possible</option>
                         <option value="Within a months">Within a months</option>
                         <option value="Within 3 months">Within 3 months</option>
