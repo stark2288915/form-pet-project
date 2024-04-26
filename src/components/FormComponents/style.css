@@ -1,0 +1,29 @@
+*{
+   margin: 0;
+   padding: 0;
+}
+
+.formMain{
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+}
+
+span{
+   display: block;
+}
+
+form div{
+   margin: 5px;
+   border: solid 1px blue;
+   padding: 3px;
+}
+
+.buttons {
+   display: flex;
+   justify-content: space-around;
+}
+
+.wantDevelop label{
+   display: block;
+}
