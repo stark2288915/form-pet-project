@@ -160,11 +160,11 @@ const FormComponent = () => {
                     <span className={'titleInput'}>What timeline do you expect for the project to be completed?</span>
 
                     <select id={'selectDeadlineProj'} value={'choose'} {...register("deadlineProj", { required: true })}>
-                        <option value="">Up to one month</option>
-                        <option value="">From 1 - 3 month</option>
-                        <option value="">From 3 - 6 month</option>
-                        <option value="">More that year</option>
-                        <option value="">Don't know the time frame (you have tell me)</option>
+                        <option value="Up to one month">Up to one month</option>
+                        <option value="From 1 - 3 month">From 1 - 3 month</option>
+                        <option value="From 3 - 6 month">From 3 - 6 month</option>
+                        <option value="More that year">More that year</option>
+                        <option value="Don't know the time frame (you have tell me)">Don't know the time frame (you have tell me)</option>
                     </select>
 
                 </div>
@@ -209,8 +209,6 @@ const FormComponent = () => {
                         <option value="No, there's no need for that.">No, there's no need for that.</option>
                         <option value="I don't know, I need more information.">I don't know, I need more information.</option>
                     </select>
-                    
-                    <input {...register("marketingProj", {required: true})}/>
                 </div>
                 
                 
@@ -218,10 +216,23 @@ const FormComponent = () => {
                     <span className={'titleInput'}>Share links to competitor websites or those that attract you.</span>
                     <input {...register("linksAttract", {required: true})}/>
                 </div>
+
+
+
                 <div>
                     <span className={'titleInput'}>How soon are you prepared to begin?</span>
-                    <input {...register("whenStart", {required: true})}/>
+
+                    <select id={'selectWhenStart'} value={'choose'} {...register("marketingProj", { required: true })}>
+                        <option value="As soon as possible">As soon as possible</option>
+                        <option value="Within a months">Within a months</option>
+                        <option value="Within 3 months">Within 3 months</option>
+                        <option value="Within 6 months">Within 6 months</option>
+                        <option value="Within a year">Within a year</option>
+
+                    </select>
+
                 </div>
+
                 <div>
 
                     <span className={'titleInput'}>Do you prefer chat or call?</span>
