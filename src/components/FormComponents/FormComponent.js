@@ -14,7 +14,9 @@ const FormComponent = () => {
     return (
         <div className={'formMain'}>
 
+
             <form onSubmit={handleSubmit(onSubmit)}>
+                <h2>Fill the form</h2>
 
                 <div>
                     <span className={'titleInput'}>How can one carry water in a sieve?</span>
