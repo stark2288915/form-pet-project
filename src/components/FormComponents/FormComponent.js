@@ -8,24 +8,29 @@ const FormComponent = () => {
 
     const onSubmit = (data) => {
         console.log(data)
+        alert("I output your data to the console!");
 
     }
     return (
         <div className={'formMain'}>
 
             <form onSubmit={handleSubmit(onSubmit)}>
+
                 <div>
                     <span className={'titleInput'}>How can one carry water in a sieve?</span>
                     <input {...register("waterQ", {required: true})}/>
                 </div>
+
                 <div>
                 <span className={'titleInput'}>First Name</span>
                     <input {...register("fName", {required: true})}/>
                 </div>
+
                 <div>
                     <span className={'titleInput'}>Email address</span>
                     <input {...register("email", {required: true})}/>
                 </div>
+
                 <div>
                     <span className={'titleInput'}>Company / Self-Employed</span>
 
